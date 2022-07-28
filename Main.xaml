@@ -1,0 +1,1310 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1200,7854" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1210,7789" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strUrlSuffix" />
+      <Variable x:TypeArguments="x:Int32" Name="intNumberBoards" />
+      <Variable x:TypeArguments="x:String" Name="strGameChoice" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Let user choose between three types of game" DisplayName="Get user choice" sap:VirtualizedContainerService.HintSize="1168,664" sap2010:WorkflowViewState.IdRef="Sequence_74">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,291" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Escolha o modo de jogo:" OptionsString="Termo;Dueto;Quarteto" Title="Escolha - Termo">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[strGameChoice]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Get the suffix to be added to the url when opening the page." DisplayName="Switch" Expression="[strGameChoice]" sap:VirtualizedContainerService.HintSize="497,210" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence x:Key="Termo" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_75">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_55">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strUrlSuffix]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Assign as termo" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[intNumberBoards]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+        <Sequence x:Key="Dueto" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_98">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_56">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strUrlSuffix]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">2</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Assign as dueto" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_72">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[intNumberBoards]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">2</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+        <Sequence x:Key="Quarteto" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_99">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_57">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strUrlSuffix]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">4</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Assign as quarteto" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_73">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[intNumberBoards]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">4</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </Switch>
+    </Sequence>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Termo" sap:VirtualizedContainerService.HintSize="1168,6993" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="5deff5a9-11ab-497d-812c-56762886c1b0" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1134,6737" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strPrimeiraPalavra" />
+              <Variable x:TypeArguments="x:Boolean" Name="didWon" />
+              <Variable x:TypeArguments="x:String" Name="strListWords" />
+              <Variable x:TypeArguments="s:String[][]" sap2010:Annotation.AnnotationText="Index zero corresponds to the first letter expression, and so on" Name="arrLettersExpressions" />
+              <Variable x:TypeArguments="s:String[][]" sap2010:Annotation.AnnotationText="Each index represents a letter, and it contains which letters cant be positioned in this index." Name="arrNotPossibleLetters" />
+              <Variable x:TypeArguments="scg:List(x:Int32)" sap2010:Annotation.AnnotationText="This list contains the indexes of the wrong letters of the current row (current word)." Name="listWrongLettersIndexes" />
+              <Variable x:TypeArguments="scg:List(x:Int32)" sap2010:Annotation.AnnotationText="This list contains the indexes of the misplaced letters of the current row (current word)." Name="listMisplacedLettersIndexes" />
+              <Variable x:TypeArguments="x:String" Name="strChute" />
+              <Variable x:TypeArguments="scg:List(x:String)[]" sap2010:Annotation.AnnotationText="List of letters that isn't in the right place (filtering words purpouses)" Name="listWrongPlaceLetters" />
+              <Variable x:TypeArguments="x:Int32" Default="1" Name="rowIndex" />
+              <Variable x:TypeArguments="s:String[]" Name="strWrongList" />
+              <Variable x:TypeArguments="s:Int32[]" sap2010:Annotation.AnnotationText="This array counts how many green letter each board has. intGreenCount(0) will be 3 if the first board has 3 matched letters." Name="intGreenCount" />
+              <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="This represents NOT the board that are being classificated, but the board that is being focused to find its word." Name="intCurrentBoard" />
+              <Variable x:TypeArguments="x:Boolean" Default="True" Name="firstTry" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign primeira palavra" sap:VirtualizedContainerService.HintSize="1092,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strPrimeiraPalavra]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">vasco</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Sequence DisplayName="Init first word" sap:VirtualizedContainerService.HintSize="1092,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts - ESC" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - primeira palavra" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="[strPrimeiraPalavra]" KeyModifiers="None">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8a59f68f-587c-4315-bb35-5e1ef12a2562">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendHotkey>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts -ENTER" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+            </Sequence>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="ChoseBoard to start&#xA;" DisplayName="Invoke ChooseBoardtToStart workflow" sap:VirtualizedContainerService.HintSize="1092,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\ChooseBoard.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:Int32" x:Key="intNumberBoards">[intNumberBoards]</InArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="intCurrentBoard">[intCurrentBoard]</OutArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="rowIndex">[rowIndex]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="strUrlSuffix">[strUrlSuffix]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="strGameChoice">[strGameChoice]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+            <Sequence DisplayName="init Variables" sap:VirtualizedContainerService.HintSize="1092,981" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[][]">[arrLettersExpressions]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[][]">[{({"","","","",""}),({"","","","",""}),({"","","","",""}),({"","","","",""})}]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[][]">[arrNotPossibleLetters]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[][]">[{({"","","","",""}),({"","","","",""}),({"","","","",""}),({"","","","",""})}]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_21">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="scg:List(x:String)[]">[listWrongPlaceLetters]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="scg:List(x:String)[]">[{(new List(of String)),(new List(of String)),(new List(of String)),(new List(of String))}]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_18">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="scg:List(x:Int32)">[listWrongLettersIndexes]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="scg:List(x:Int32)">[new List(of Int32)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_19">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="scg:List(x:Int32)">[listMisplacedLettersIndexes]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="scg:List(x:Int32)">[new List(of Int32)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_47">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[]">[strWrongList]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[]">[{"","","",""}]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_48">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:Int32[]">[intGreenCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:Int32[]">[{0,0,0,0}]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_20">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strChute]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[strPrimeiraPalavra]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ReadTextFile Content="[strListWords]" DisplayName="Read Text File - init strListWords" FileName="pt-br-master\dicio.txt" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ReadTextFile>
+            </Sequence>
+            <ui:InterruptibleDoWhile Condition="[not didWon]" DisplayName="Do While - Game loop" sap:VirtualizedContainerService.HintSize="1092,5221" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body - Game Loop" sap:VirtualizedContainerService.HintSize="1056,5056" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="wrongWord" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Only reset the count of green letters of those boards which didn`t got to 5." DisplayName="Repeat Number of Times - Reset intGreenCount" sap:VirtualizedContainerService.HintSize="1014,122" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_7" NumberOfTimes="4" StartAt="0">
+                    <ui:RepeatNumberOfTimesX.Body>
+                      <ActivityAction x:TypeArguments="x:Int32">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="board" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,430" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[not intGreenCount(board).Equals(5)]" sap:VirtualizedContainerService.HintSize="484,338" sap2010:WorkflowViewState.IdRef="If_15">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign DisplayName="Zero count" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_77">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[intGreenCount(board)]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RepeatNumberOfTimesX.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:RepeatNumberOfTimesX>
+                  <If sap2010:Annotation.AnnotationText="Filter words and submit strChute" Condition="[not firstTry]" DisplayName="If isn't the first try" sap:VirtualizedContainerService.HintSize="1014,93" sap2010:WorkflowViewState.IdRef="If_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,336" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap2010:Annotation.AnnotationText="If not first try, get the chute by filtering the list of words with a regex genereted by the newest clues" DisplayName="Get chute" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="wordMatches" />
+                            <Variable x:TypeArguments="s:String[]" Name="arrMatches" />
+                            <Variable x:TypeArguments="x:String" Name="strInput" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If sap2010:Annotation.AnnotationText="Filter regex's input by words that have those letters&#xA;" Condition="[not (listWrongPlaceLetters.Count = 0)]" DisplayName="If misplaced letters list isn't empty" sap:VirtualizedContainerService.HintSize="334,108" sap2010:WorkflowViewState.IdRef="If_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="418,733" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Filter words by misplaced words" sap:VirtualizedContainerService.HintSize="376,641" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="s:String[]" Name="arrPalavras" />
+                                    <Variable x:TypeArguments="scg:List(x:String)" Name="listWords" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Replace DisplayName="Replace \n by spaces" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Replace_2" Input="[strListWords]" IsBuilderTabModified="False" Pattern="\n" RegexOption="IgnoreCase, Compiled" Replacement=" " Result="[strListWords]" />
+                                  <Assign DisplayName="Transform string into an array" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:String[]">[arrPalavras]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:String[]">[strListWords.Split(" "c)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign DisplayName="Init list" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="scg:List(x:String)">[listWords]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each word of arrPalavras" sap:VirtualizedContainerService.HintSize="640,1097" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[arrPalavras]">
+                                    <ui:ForEach.Body>
+                                      <ActivityAction x:TypeArguments="x:String">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:String" Name="word" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,973" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:Boolean" Name="isValid" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign DisplayName="Restart validation" sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[isValid]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,494" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[listWrongPlaceLetters(intCurrentBoard)]">
+                                            <ui:ForEach.Body>
+                                              <ActivityAction x:TypeArguments="x:String">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:String" Name="letter" />
+                                                </ActivityAction.Argument>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="526,370" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <If sap2010:Annotation.AnnotationText="Until all letters from listWrongPlaceLetters has been iterated" Condition="[isValid]" DisplayName="If still valid, test again" sap:VirtualizedContainerService.HintSize="484,278" sap2010:WorkflowViewState.IdRef="If_5">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Boolean">[isValid]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Boolean">[word.Contains(letter)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ui:ForEach.Body>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:ForEach>
+                                          <If Condition="[isValid]" DisplayName="If word has passed test" sap:VirtualizedContainerService.HintSize="562,247" sap2010:WorkflowViewState.IdRef="If_4">
+                                            <If.Then>
+                                              <AddToCollection x:TypeArguments="x:String" Collection="[listWords]" DisplayName="Add To List" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_7" Item="[word.Substring(0,5)]" />
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEach.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:ForEach>
+                                  <Assign DisplayName="ReAssign list after filter" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[strListWords]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[String.Join(Environment.NewLine,listWords)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:Replace sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[strListWords]" IsBuilderTabModified="False" Pattern="\r" RegexOption="IgnoreCase, Compiled" Result="[strListWords]">
+                                    <ui:Replace.Replacement>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <Literal x:TypeArguments="x:String" Value="" />
+                                      </InArgument>
+                                    </ui:Replace.Replacement>
+                                  </ui:Replace>
+                                </Sequence>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <ui:Matches sap2010:Annotation.AnnotationText="Regex will consist of the five letters expression concatenated with an anchor on a new line after it." DisplayName="Matches - filter words" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[strListWords]" IsBuilderTabModified="False" Pattern="[String.Join(&quot;&quot;,arrLettersExpressions(intCurrentBoard))+&quot;(?=\s)&quot;]" RegexOption="IgnoreCase, Multiline, Compiled" Result="[wordMatches]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Matches>
+                          <Assign DisplayName="Assign first match to strChute" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[strChute]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[wordMatches(0).ToString]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                        <Sequence DisplayName="Submit chute" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - primeira palavra" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="[strChute]" KeyModifiers="None">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8a59f68f-587c-4315-bb35-5e1ef12a2562">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendHotkey>
+                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts -ENTER" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NKeyboardShortcuts>
+                        </Sequence>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_54">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[firstTry]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <Sequence DisplayName="Wrong word?" sap:VirtualizedContainerService.HintSize="1014,66" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="visibleText" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign DisplayName="Reset element" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[visibleText]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:GetVisibleText FormattedText="{x:Null}" WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get Visible Text 'WC-NOTIFY'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetVisibleText_1">
+                      <ui:GetVisibleText.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1ac7b64-ab33-4e13-94b4-613359fa67cc" InformativeScreenshot="1bc5c9c210091c71e7433475c8f98c57" Selector="&lt;webctrl tag='WC-NOTIFY' /&gt;&lt;webctrl shadowhostid='' tag='DIV' /&gt;" TimeoutMS="3000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetVisibleText.Target>
+                      <ui:GetVisibleText.Text>
+                        <OutArgument x:TypeArguments="x:String">[visibleText]</OutArgument>
+                      </ui:GetVisibleText.Text>
+                    </ui:GetVisibleText>
+                    <Assign DisplayName="Assign - found sign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[wrongWord]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">[visibleText isnot Nothing]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                  <If sap2010:Annotation.AnnotationText="Analyzes new classifications&#xA;Adjusts regex exp." Condition="[not wrongWord]" DisplayName="If accepted word" sap:VirtualizedContainerService.HintSize="1014,3477" sap2010:WorkflowViewState.IdRef="If_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="769,3278" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Iterates for all words to find (all columns, that can be 1, 2 or 4 depending on the type of the game)" DisplayName="Repeat Number of Times - for each word to be found" sap:VirtualizedContainerService.HintSize="727,3086" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_2" NumberOfTimes="[intNumberBoards]" StartAt="0">
+                          <ui:RepeatNumberOfTimesX.Body>
+                            <ActivityAction x:TypeArguments="x:Int32">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Int32" Name="board" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="693,2900" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If Condition="[not intGreenCount(board).Equals(5)]" DisplayName="If this board wasn't finished, analyses it" sap:VirtualizedContainerService.HintSize="651,2808" sap2010:WorkflowViewState.IdRef="If_13">
+                                  <If.Then>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="615,2622" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="strListYellow" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap2010:Annotation.AnnotationText="Those lists must be zeroed for each board cicle, because it is used for each row." DisplayName="Zero lists and counts" sap:VirtualizedContainerService.HintSize="573,394" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_74">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="scg:List(x:Int32)">[listWrongLettersIndexes]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="scg:List(x:Int32)">[new List(of Int32)]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_75">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="scg:List(x:Int32)">[listMisplacedLettersIndexes]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="scg:List(x:Int32)">[new List(of Int32)]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Assign DisplayName="Reset list yellow" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_79">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[strListYellow]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <Literal x:TypeArguments="x:String" Value="" />
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="573,91" sap2010:WorkflowViewState.IdRef="LogMessage_16" Message="[&quot;Analysing board &quot;+board.ToString]" />
+                                      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Get letters classification (colors)" DisplayName="Repeat 5 Times - Iterates through letters written" sap:VirtualizedContainerService.HintSize="573,841" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="5" StartAt="0">
+                                        <ui:RepeatNumberOfTimesX.Body>
+                                          <ActivityAction x:TypeArguments="x:Int32">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Int32" Name="letterIndex" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do - Repeat number of times" sap:VirtualizedContainerService.HintSize="539,655" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:String" Name="strClass" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Sequence DisplayName="Get letter's &quot;color&quot;" sap:VirtualizedContainerService.HintSize="497,66" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="x:Int32" Name="intIndexLetraSelector" />
+                                                  <Variable x:TypeArguments="x:Int32" Name="intIndexPalavraSelector" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">[intIndexLetraSelector]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">[letterIndex+1]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">[intIndexPalavraSelector]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">[rowIndex-1]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute 't'" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="5deff5a9-11ab-497d-812c-56762886c1b0" Timeout="10" Version="V1">
+                                                  <uix:NGetAttribute.Result>
+                                                    <OutArgument x:TypeArguments="x:String">[strClass]</OutArgument>
+                                                  </uix:NGetAttribute.Result>
+                                                  <uix:NGetAttribute.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://term.ooo/" DesignTimeRectangle="160, 333, 53, 53" ElementType="Text" FriendlyName="'t'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl id='board{0}' tag='WC-BOARD' /&gt;&lt;webctrl shadowhostid='board{0}' tag='WC-ROW' aria-label='palavra {1}' /&gt;&lt;webctrl shadowhostid='' tag='DIV' idx='{2}' /&gt;&quot;, board, intIndexPalavraSelector, intIndexLetraSelector)]" FuzzySelectorArgument="&lt;webctrl tag='WC-BOARD' /&gt;&lt;webctrl shadowhostid='board0' tag='WC-ROW' /&gt;&lt;webctrl shadowhostid='' tag='DIV' type='' aaname='t' check:text='t' /&gt;" Guid="db348c71-2956-441d-85bb-56bea4f0730d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFZSURBVGhD7doxSwNBEIZhf48oaBEEBTuxUFBEQURRIrYKQQLJH4xiEFRQwVYLUTCFRRLEka9ION3hcvEGZWe/4u0ud/vcsEWOnTjerYr30kTur2/J0vyiVKZnZHZyKpqwXqwb6/9p+obcXF5RbxBbcGRdQyTegPaDWMtOdIjEqLWLYw2eABnbHhwVPAFSuzD2iPQSkV4i0ktEeolIL5kiFypzctm+kl7vU/p9KR3uc3/3IHvbO+rzimaKPDo4lKfHZ3XBv63z9i7NekN9XtGIHLckkNiTZ60L6XY/1AWPG/bkzfWtbKyuqc8rmikyL0wDU9EwFtPKi0jLiCSyfERaRiSR5SPSMiKJLB+RlhHpBXl6UpPXl45vJL4anLfawZc8q3//ef0Z8j8j0ktEeolILxHppQCZxNm6JE5JJnHeFbk/uTwIbwCjjm2PYr1Yd3aCgwKkxxJAVuUL7cfMvCY5JgoAAAAASUVORK5CYII=" InformativeScreenshot="2a5f320d4c5ab850974b7d32693b4bc6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Termo' /&gt;" SearchSteps="Selector" />
+                                                  </uix:NGetAttribute.Target>
+                                                </uix:NGetAttribute>
+                                              </Sequence>
+                                              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Fills those lists/arrays:&#xA;&#xA;strWrongList&#xA;listWrongLettersIndexes&#xA;&#xA;arrNotPossibleLetters&#xA;listMisplacedLettersIndexes&#xA;listWrongPlaceLetters - (filter purposes)&#xA;&#xA;*OBS each of those lists/arrays were transformed in arrays of x elements, where x is the number of boards, for the robot to solve more than one board games. Actually it'll be instantiated with 4 (max) all the time, but it'll use only the x elements of each list/array.&#xA;&#xA;*green count is present in every board too" DisplayName="Switch between classifications" Expression="[strClass]" sap:VirtualizedContainerService.HintSize="497,457" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                                                <Switch.Default>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;Class not found: &quot;+strClass]" />
+                                                </Switch.Default>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Sequence x:Key="letter wrong" sap:VirtualizedContainerService.HintSize="304,360" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign DisplayName="Adds letter to wrong list" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[strWrongList(board)]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[strWrongList(board)+strChute(letterIndex).ToString]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <AddToCollection x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Adds letter index to listWrongLettersIndexes" Collection="[listWrongLettersIndexes]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="[letterIndex]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </AddToCollection>
+                                                  <AddToCollection x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Adds letter index to listMisplacedLettersIndexes" Collection="[listMisplacedLettersIndexes]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="AddToCollection`1_8" Item="[letterIndex]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </AddToCollection>
+                                                </Sequence>
+                                                <Sequence x:Key="letter place" sap:VirtualizedContainerService.HintSize="304,502" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Adds letter &#xA;listWrongPlaceLetters" Collection="[listWrongPlaceLetters(board)]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[strChute(letterIndex).ToString]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </AddToCollection>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[arrNotPossibleLetters(board)(letterIndex)]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[arrNotPossibleLetters(board)(letterIndex)+strChute(letterIndex).ToString]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <AddToCollection x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Adds letter index to listMisplacedLettersIndexes" Collection="[listMisplacedLettersIndexes]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[letterIndex]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </AddToCollection>
+                                                  <Assign sap2010:Annotation.AnnotationText="This will be used only to the replace after this repeat number of times activity" DisplayName="Add to yellow list" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_78">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[strListYellow]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[strListYellow+strChute(letterIndex).ToString]</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                </Sequence>
+                                                <Sequence x:Key="letter right" sap:VirtualizedContainerService.HintSize="304,294" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign sap2010:Annotation.AnnotationText="Assign letter's expression to the letter itself" DisplayName="Adjust regex expression for this letter" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[arrLettersExpressions(board)(letterIndex)]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[strChute(letterIndex).ToString]</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                  <Assign DisplayName="Count green to this board" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_44">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[intGreenCount(board)]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[intGreenCount(board)+1]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </Sequence>
+                                                <Sequence x:Key="letter right done" sap2010:Annotation.AnnotationText="this case is when you got the word right, the class transforms into done." sap:VirtualizedContainerService.HintSize="304,368" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign sap2010:Annotation.AnnotationText="Assign letter's expression to the letter itself" DisplayName="Adjust regex expression for this letter" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_49">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[arrLettersExpressions(board)(letterIndex)]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[strChute(letterIndex).ToString]</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                  <Assign DisplayName="Count green to this board" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_50">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[intGreenCount(board)]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[intGreenCount(board)+1]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </Sequence>
+                                                <x:Null x:Key="letter" />
+                                              </Switch>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:RepeatNumberOfTimesX.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:RepeatNumberOfTimesX>
+                                      <ui:Replace sap2010:Annotation.AnnotationText="Removes yellow letters from wrong list. The game developer decided that there can be a letter that is wrong and misplaced in the same row.&#xA;The one is not useful, its just for not being a empty regex set." sap:VirtualizedContainerService.HintSize="573,146" sap2010:WorkflowViewState.IdRef="Replace_11" Input="[strWrongList(board)]" IsBuilderTabModified="False" Pattern="[&quot;[1&quot;+strListYellow+&quot;]&quot;]" RegexOption="IgnoreCase, Compiled" Result="[strWrongList(board)]">
+                                        <ui:Replace.Replacement>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <Literal x:TypeArguments="x:String" Value="" />
+                                          </InArgument>
+                                        </ui:Replace.Replacement>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:Replace>
+                                      <Sequence sap2010:Annotation.AnnotationText="After analyzing colors of last submitted word&#xA;&#xA;For wrong and misplaced letters&#xA;&#xA;Do that for all number of words (boards)" DisplayName="Adjust regex expressions" sap:VirtualizedContainerService.HintSize="573,898" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Example:&#xA;if letters 'a','b' are wrong and 'c' is miscplaced, and current letter is c, this letter expression will be [^(abc)] while wrong letters` exp. will be only [^(ab)]." DisplayName="For Each - misplaced letters indexes" sap:VirtualizedContainerService.HintSize="434,719" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[listMisplacedLettersIndexes]">
+                                          <ui:ForEach.Body>
+                                            <ActivityAction x:TypeArguments="x:Int32">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="x:Int32" Name="index" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,524" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;Letra errada: &quot;+strChute(index).ToString+Environment.NewLine+&quot;Lista: &quot;+String.Join(&quot;, &quot;, listMisplacedLettersIndexes)]" />
+                                                <If sap2010:Annotation.AnnotationText="Deletes it from wrong letter list&#xA;Adds this letter to the list of not possible letters for the wrong letter index" Condition="[strWrongList.Contains(strChute(index).ToString)]" DisplayName="If this is a wrong letter too" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="If_7">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="376,415" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                      <Sequence.Variables>
+                                                        <Variable x:TypeArguments="x:Int32" Name="wrongListIndex" />
+                                                      </Sequence.Variables>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each - find wrongListIndex" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[listWrongLettersIndexes]">
+                                                        <ui:ForEach.Body>
+                                                          <ActivityAction x:TypeArguments="x:Int32">
+                                                            <ActivityAction.Argument>
+                                                              <DelegateInArgument x:TypeArguments="x:Int32" Name="idx" />
+                                                            </ActivityAction.Argument>
+                                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,430" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <If Condition="[strChute(idx).ToString.Equals( strChute(index).ToString )]" DisplayName="If letter of the idx is the same of the letter from index" sap:VirtualizedContainerService.HintSize="484,338" sap2010:WorkflowViewState.IdRef="If_8">
+                                                                <If.Then>
+                                                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <Assign DisplayName="Assign the index from the wrong list" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                                      <Assign.To>
+                                                                        <OutArgument x:TypeArguments="x:Int32">[wrongListIndex]</OutArgument>
+                                                                      </Assign.To>
+                                                                      <Assign.Value>
+                                                                        <InArgument x:TypeArguments="x:Int32">[idx]</InArgument>
+                                                                      </Assign.Value>
+                                                                    </Assign>
+                                                                  </Sequence>
+                                                                </If.Then>
+                                                                <If.Else>
+                                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                  </Sequence>
+                                                                </If.Else>
+                                                              </If>
+                                                            </Sequence>
+                                                          </ActivityAction>
+                                                        </ui:ForEach.Body>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:ForEach>
+                                                      <ui:Replace sap2010:Annotation.AnnotationText="Remove from wrong list" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Replace_10" Input="[strWrongList(board)]" IsBuilderTabModified="False" Pattern="[strChute(index).ToString]" RegexOption="IgnoreCase, Compiled" Result="[strWrongList(board)]">
+                                                        <ui:Replace.Replacement>
+                                                          <InArgument x:TypeArguments="x:String">
+                                                            <Literal x:TypeArguments="x:String" Value="" />
+                                                          </InArgument>
+                                                        </ui:Replace.Replacement>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:Replace>
+                                                      <Assign sap2010:Annotation.AnnotationText="Adds letter to the list of not possible letter to the wrong letter index" DisplayName="Assign - adds to list" sap:VirtualizedContainerService.HintSize="334,102" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[arrNotPossibleLetters(board)(wrongListIndex)]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[arrNotPossibleLetters(board)(wrongListIndex)+strChute(index).ToString]</InArgument>
+                                                        </Assign.Value>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                                <If sap2010:Annotation.AnnotationText="Only assign if isnt a letter already found (if the expression has only 1 letter, i.e. isn`t a regex set)" Condition="[not arrLettersExpressions(board)(index).Length.Equals(1)]" DisplayName="If isn`t a green letter" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="If_11">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[arrLettersExpressions(board)(index)]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">["[^\s("+strWrongList(board)+arrNotPossibleLetters(board)(index)+")]"]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ForEach.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:ForEach>
+                                      </Sequence>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:RepeatNumberOfTimesX.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:RepeatNumberOfTimesX>
+                        <Assign DisplayName="Count row index" sap:VirtualizedContainerService.HintSize="727,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[rowIndex]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[rowIndex+1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:Annotation.AnnotationText="Clear word and remove from list" DisplayName="Clear word " sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts - Clear word" sap:VirtualizedContainerService.HintSize="334,195" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][k(back)][u(hk)][d(hk)][k(back)][u(hk)][d(hk)][k(back)][u(hk)][d(hk)][k(back)][u(hk)][d(hk)][k(back)][u(hk)]" Version="V1" />
+                        <ui:Replace DisplayName="Replace - remove word from list" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Replace_4" Input="[strListWords]" IsBuilderTabModified="False" Pattern="[strChute+&quot;\n&quot;]" RegexOption="IgnoreCase, Compiled" Result="[strListWords]">
+                          <ui:Replace.Replacement>
+                            <InArgument x:TypeArguments="x:String">
+                              <Literal x:TypeArguments="x:String" Value="" />
+                            </InArgument>
+                          </ui:Replace.Replacement>
+                        </ui:Replace>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:UiElementExists DisplayName="Element Exists - progresso (checks if won)" Exists="[didWon]" sap:VirtualizedContainerService.HintSize="1014,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a07759b5-60d7-4c3a-b07c-efaeeb49a63a" InformativeScreenshot="6f47082a28271eb6d2b85f3cd8f3444d" Selector="&lt;webctrl tag='WC-STATS' /&gt;&lt;webctrl shadowhostid='stats' tag='H2' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If sap2010:Annotation.AnnotationText="If didn't won and found all green letters for this word, go to next word (THAT ISN'T FINISHED) and reset list of words." Condition="[intGreenCount(intCurrentBoard).Equals(5) AND not didWon]" DisplayName="If completed a word, go next" sap:VirtualizedContainerService.HintSize="1014,769" sap2010:WorkflowViewState.IdRef="If_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="426,541" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="ChoseBoard AGAIN&#xA;Same process of the begining, but now we are at other row (the selector of the row will be different, so the points will be different too and the rank may vary).&#xA;" DisplayName="Invoke ChooseBoardtToStart workflow" sap:VirtualizedContainerService.HintSize="384,199" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Components\ChooseBoard.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="intNumberBoards">[intNumberBoards]</InArgument>
+                            <OutArgument x:TypeArguments="x:Int32" x:Key="intCurrentBoard">[intCurrentBoard]</OutArgument>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="rowIndex">[rowIndex-1]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strUrlSuffix">[strUrlSuffix]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strGameChoice">[strGameChoice]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Changing to board &quot;+intCurrentBoard.ToString+&quot;, greens: &quot;+String.Join(&quot;,&quot;,intGreenCount)]" />
+                        <ui:ReadTextFile Content="[strListWords]" DisplayName="Read Text File - reset strListWords" FileName="pt-br-master\dicio.txt" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ReadTextFile>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="847,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Current pattern: &quot;+String.Join(&quot;,&quot;,arrLettersExpressions(intCurrentBoard))+&quot;, board: &quot;+intCurrentBoard.ToString]" />
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 754" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAzVSURBVGhD7ZkLVJVVFsdbk81kjxlsMjMDAQUELly4aCjo5YIv0FScZsax5ahjU+lYYZlTo1P0mMrMBBTRUBEfWI0V41RTmoqWbysce46ZmIBaCRcRRb2Xs2f/z+Pej0dmaTNrzZq91n/tffZ5fL9zvnPO/dBL/m//C3Z1u0sDkgJ+6no8PDBnWUxY6btJsRX7nXHur/r3oi9TEwTiDb2iy0sdEWWPhwXmZHQMyEQf3f2/Z30CrnYB6rN+CtYAf5nWk6RcCeKoyyHLR1O5DMk4QZZzI7suHXxtQKYe7j9nAN/QM6pcQmpgH6gPGJAJCpplykdd2rOOpMSLI1zelWir+HWnn4/Tw/9wduPlPw5+OS68rDmoBc6IoY64HAqQpcomb8C53qoUB71s716GZ+jHXVy7vUunrE+T7W4DzA8UyjMgvAaUkAbQAnrYGS8OM6SK42R8OCWeZbzSJ0kx7ttv6DhFP/bi2P1dO2crGIA2BzNwvlgCoY2SH07lq/sBPl55J+fZV/ezyxi+ui+L4/uCOmXrx1+Y3d/1+mwJZ4GU8gFaIAFk4FAGHMAggLHkJCRsnGwv8xxDVS381AudxNSg67MBYVa2FbReRX6YfxVZyjME+yoDyB5gKFtBm6mv8Xaf7gu87vtN4vc3XJdlWS0fnJJePQiAGla3bVMAM74qOVZIWAaslLGCrUyKEZXwRign22lC52u/25nATYDDxA/0bwEJCfGqWmEgs7o6L+sAZbwGMt4KJ3PsVTlWxc18LH2QGO3u8pPLzv92WusIL+eBsTJyAlY4E6tVVAByNblsVrMyiWMDKQEViBXqENTHJuBlOUmpWV1SDOeUXowKKdN457ZrnEHj3xzV2796xhs4LRP7cvzQ6vS+VJc3i069vZE8h6vJZ556EsffpabPHyVv+TDy7uzJcgjvzgTy7nAIz454Ke8OLiNnJHMOtJHllPirUjTmN5stb1DFuNkZCoxX0AqtQCGzajG8SrFUlZ5Mx5csoKb6ek18bmuqek5BaUDPjjj28SbHQtnkjOJod3F4ucZs2wISOo9wrBpJUMEkp2VfWl+tyslXzDryy/Rmq13fKOi1PWdozpuNNO2FkzSxuIGefeMUbfrUo1toO11N3vczeOXtwrPdDmDybo8jDwtx005VRsz12scIZ/yVLo3b2kLv7V0aX5IpHCUjqW/RcPokLU7tTbkf5Yr79EVvmzh8S3P457efobSnjlOvR+qoV7aWJR6Re4IKy07r1mxqEgzKgD7F8IRiJaxX+ljOKXm228T6+d9wFi5tf1lA/MpMMopbOULMvKef+KIPw0IMLCXjaOkNPFb9zqUN1JMhz0doiz7SMIndyQBn2YRnm43BEfP426J9sXebDfV0bG1kbcBVbXyK/8zROZOhGZzhV4yQk7CvGC52DYxjWJuZBB1MBLyN6hYXKAC2O4oaKOHhOpZbekCauJV03R1FJ3RvPhOVBQyrAD3booRXKtpSRszS3hl3Rett1OVWWy7A7ct5Euxjlw8T9uXDaczMQRL6YO9oUrJR1cjB+tFECzc2koOBWgqwbeUhTAK+ZJveTnxLeXclApwh21IkTySSfQ9uE0nPZnXM0dh+6/ZgchmA43gC8DHLbhb2ZcMJevUXPRV8YjRVsL5+bIZ6MNvQOccp/iG3EkP5ZHLWOmsbjp1P1vm2UtOBJxlOAUrgrREC8kLbegCec8q/9NQNpRrbb2GPpZTHLhtGfqlJQP3z08WBXpGiIjGK4Bvf2yUfuvHjsxSnAeG/j/7+/hk5lqhZT14NyNBKEjqCPFvCMBHOhXM5TOxfHXJAY/sten6GO6Z4GMUU30yx7G3FDM8xcrbioSLvtt6i4iaeAMvc97P+cZIhasn+ZxZ7xIBSMQDbzsObPMaQdrqK4QAYLkG9W8MsXsmzpbvgydDXb4TWamy/xSxlWKsAbyknLswQe5Oi+E1EqQey3baknmIZHjJQpixzbcRysjqGppQ06NFIgW7pDlBWN1717pxT8mwJFd4t3biexWWN7TcbQ/o1lGxFLI6ji4aIKBbiB7OSxf6ECH3/EWWVnPCBxLTwJm5ZNjE0cFYNFZW5qa6uTqq2tlbKXb1N1B1aSyc/mk5nd/Zl6FClraHkeQcKFhrbb5H5g9zRDB1VlCEAH71kCMOzR25JhjDlt9LtfP9XyQk8/fpJss2ooZgZDOdTyzIL8OxN24FP19LKzcck7IkTJ6ixsZHOnj1LXq9XCjFyqEOb+s+X8kSSGbwrv4UQ3kKBbo3tt7BZropIC6j0WshDURyPeiyVGsrekhMofe+0hLJpOKNorZZ1yE1aWkMHq2uooaFBwkoTTXwNcWwVcmxog7Y1Xx2kxj3jMQnaXdS59TfRjZMdpQCMWpzBK85ex5GL00UPlswvVrmyVTlycFyBfR53+4B9mu6Poyzx1JIauaJnzuibp6lJCXFb0vUw9EHfk3sn0/q5HVt/TnT6TWQuYAEZuQiwDM++x6LBwngI+dTCTFF/Rh2+5VsbJaRPGrqlDLzHoz7qmrweCQkTBz4ksW4lf0w9I4UYOVnHQlsY+mKM1fm/elVj+619+DUpPQrTCQJw5CJ4v1Ter/z3+IHaxi46TpHTj7FqtJrHaTOP8bY5Jvc2zAdfuY9Ezt1EE/sQTYjna82hhJhzsg5tdB8Yxqg8dKAhKCio+V9ol7ZvFxCe07/WTCKicJDoUThYxsoPpojnBolwFnK9lt5CVfVH5aDYSphEjz8day2ewAo+sNjHsCbe0xL+g60k7kkluv0morvZZ/VnpWlxjBzXyTZoq/vCMFZ+fn6xRvdb4NReZRHPDSYJyR6xhNexkSmnrRrrmwRs3vpTlMY3TASDG6XOVFsHh1Hw4WwSjFK1nwQAJ/BqT0oiAuRdKQztUkKM3KRk2Ua25T7oizEwFsZs9RauCOvgilg4iMIWDhQSlmMoXHvkIVNGG9fKMaKq/oiegrK3PjpDT7zWQL8trKMVb7vldQjDwwUg8qYQjYkmwhaZPYm3C0/CgJuJIDfrTqI5k7ltlOwj++KGYsOYEydObP2vFV3uTSgDoIGU8YKBUmELBojwBSan87p+7u7lcuCWhh8o3OmCr0V5nxz6F9F4O1HJLFkvbcYtarXNG0A8faSuZFs5U/XhvhgDY2HMNWvWbNLYfmvPbyGMgboXDBDwYQUKvntBf1nuxt5XLhgg601d6sox9MDGZ2hH9R6q1FvL7XbLgyewhbCCbxSrVfbwgd64mmhfOb+y53mVI4mmDFTiFad1JUT79xJtfkW1nezkvsvUGDwWxty0aVPbfyPjLSg4DTh/ACbkKytoVUad9DpWed2GyzU1NerqbOKbhx9Oix/iPyIeVG8CoHfxir9fxtvlDqLf8e0DIS7fpN4G2hzaR7TgAe77sBqDx8KYGFsjN7fLrmkfHDLbWWuApG+h0Pw0oeL+lliVu+WrHHyrCRTy3xKr+L7HyuIQT+5HdH8G0WtFaluVPE30OsfIoQ5tNpdyH67jvuc1AViAKzALAAAycCibnNVb1b1F+cNDnzbfQqX8p2jBH4l2vqn29ZQBRH/oS3Rnb6KHRykhRg51aLNzLdH8abKvHENvoc2bN+/RuG1bhyHB2aHz0hiEJT2g0ihkXqpAGV7GnDexqYPQd93Hm0WzQ/w57+tpQ4kqPuItwtcj7215ZSLGzSNvJI6RM3VoO22I7Puth7ildUgPeQQgPs1NZfnj4LkuYa2TZYufsXZ282sU/olxRH9boLbR6Ai111v9kHHuVq5Dm9IFso/s+23XaFsWkBGcHcIwRsF5LiE9Q4bk6Xyey1fvy7GSl4xq44fsMxJY6V3riNa/wKvO1+b4OP6MSFBCjKt0w4uyjWx7Pj9k57KrU7pkBT6V7O6alyIgQMo4V8U8KSl/jsu5PCn2xbteav0p8c93FNgr84n2biVaU0i0JFsJMXJcJ9ugre4L+8ZPiW+zdh0uD+402V4GsKBcpwRFbFVQjlOgDjHXy/LI4hHi2JcH5cGD+T/m+E38ZSzRA8PU1frXXBZ/qiPmnKxDG90HhjEqKirqvtPqt7Qrb+o0rstDiRVdc1IIAmRgTj8Bb3JSPAH4whe7ilPvZsrXLq9UNt8k2MRne/iG4TOxiH8jWIiRk3UsA4++GGPIkCEX5/+Wr7Bdm9lxQnRp4LP9JDi8ip0UNMfJ8E5Kyu9Nng0/kTpZPlYCXMgfNKNHjx6vH3/x7EeXtwvAZAJGhOZ0nBRTdv1UR3ngE0luTOKF1V3o6zXt3PtK2lW89Gi70tXzhr166IuKE9jHOIzS8OcjbherkGNDG7TFtrloK3+hhv2LQ4gVxXWIOx17G7AQYuRQhzZoe0F7/ocyQOEuxw8SflUBCyFGDnXnBr/kkn8DTkjoVRr1QL4AAAAASUVORK5CYII=" InformativeScreenshot="1615d397cf5e29b9f205a37a8ef106b5.png" Selector="&lt;html app='chrome.exe' title='Termo'/&gt;" Url="[&quot;https://term.ooo/&quot;+strUrlSuffix]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
